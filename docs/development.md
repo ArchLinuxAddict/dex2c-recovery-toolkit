@@ -26,6 +26,11 @@ python3 -m venv .venv
 5. Do not promote a method to exact/semantic equivalence without an
    authoritative reference.
 
+## Coverage
+
+Coverage is not measured in 1.0.0; no percentage is claimed. See
+`docs/test-report.md` for tested and untested paths.
+
 ## Release checklist
 
 - Update `CHANGELOG.md` and version.

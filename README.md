@@ -175,6 +175,7 @@ when the tool, device, or `DEX2C_TEST_APK` is unavailable. See [docs/development
 - [Limitations](docs/limitations.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Development](docs/development.md)
+- [Test report](docs/test-report.md)
 
 ## Troubleshooting
 
