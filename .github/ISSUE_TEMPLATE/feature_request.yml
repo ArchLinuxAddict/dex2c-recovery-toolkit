@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a focused improvement
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and proposed validation
+      description: What evidence would support the feature, and how should it be tested?
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - CLI / documentation
+        - DEX analysis
+        - ELF/JNI analysis
+        - Recovery / validation
+        - Runtime observation
+        - Packaging / CI
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations / alternatives
+    validations:
+      required: false

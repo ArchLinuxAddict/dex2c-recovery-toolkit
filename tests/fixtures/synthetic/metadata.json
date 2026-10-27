@@ -1,0 +1,26 @@
+{
+  "fixture": "Fixture.apk",
+  "dex_fixture": "Fixture.dex",
+  "source": "Fixture.smali",
+  "manifest_source": "AndroidManifest.xml",
+  "provenance": "Self-created for the public toolkit and lab; no target application code or framework code is included.",
+  "license": "MIT",
+  "apk_sha256": "e88e234c773d6384251062720210aa4e324c15d1ce99014d876525fbb08eff1e",
+  "apk_size": 1113,
+  "dex_sha256": "b30683587f01623dd03865a77c7f4221250d57fe61b404482ac5ada5e4b397f6",
+  "dex_size": 592,
+  "dex_version": 35,
+  "package": "dev.dex2c.fixture",
+  "version_code": "1",
+  "version_name": "1.0",
+  "classes": ["Ldex2c_recover/Fixture;"],
+  "expected_methods": [
+    ["<init>", "()V"],
+    ["add", "(I I)I"],
+    ["answer", "()I"]
+  ],
+  "build_commands": [
+    "aapt2 link -o Fixture.apk --manifest AndroidManifest.xml -I $ANDROID_HOME/platforms/android-35/android.jar",
+    "python -c \"import zipfile; z=zipfile.ZipFile('Fixture.apk','a'); z.write('Fixture.dex','classes.dex'); z.close()\""
+  ]
+}

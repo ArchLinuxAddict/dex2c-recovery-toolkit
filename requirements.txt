@@ -1,0 +1,4 @@
+androguard>=4.1.2
+capstone>=5.0
+pyelftools>=0.30
+lief>=0.14

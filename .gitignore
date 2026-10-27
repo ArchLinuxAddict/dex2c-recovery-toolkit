@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Analysis output and input artifacts
+output/
+analysis/
+extracted/
+*.apk
+*.apks
+*.xapk
+*.dex
+!tests/fixtures/synthetic/Fixture.dex
+!tests/fixtures/synthetic/Fixture.apk
+*.odex
+*.vdex
+*.so
+*.jar
+!tools/**/*.jar
+*.log
+
+# Local tools and SDKs
+tools/
+android-sdk/
+ghidra/
+jadx/
+apktool/
+
+# Editor/OS state
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+*.pem
+*.key

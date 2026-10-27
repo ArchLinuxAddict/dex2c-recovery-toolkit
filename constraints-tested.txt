@@ -1,0 +1,9 @@
+# Versions used for the 1.0.0 publication verification on Python 3.14.8.
+# These are constraints, not a fully resolved lockfile.
+androguard==4.1.4
+capstone==5.0.9
+pyelftools==0.33
+lief==1.0.0
+frida==17.24.3
+pytest==9.1.1
+ruff==0.17.2

@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dex2c-recover"
+version = "1.0.0"
+description = "Static and authorized runtime analysis of Dex2C-protected APKs with evidence-backed recovery and validation"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "Eliza Pears", email = "ArchLinuxAddict@users.noreply.github.com"}]
+keywords = ["android", "dex", "jni", "reverse-engineering", "dex2c", "apk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Disassemblers",
+]
+dependencies = [
+    "androguard>=4.1.2",
+    "capstone>=5.0",
+    "pyelftools>=0.30",
+    "lief>=0.14",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+runtime = ["frida>=17.0"]
+dev = ["pytest>=8.0", "ruff>=0.8", "frida>=17.0"]
+
+[project.urls]
+Homepage = "https://github.com/ArchLinuxAddict/dex2c-recovery-toolkit"
+Documentation = "https://github.com/ArchLinuxAddict/dex2c-recovery-toolkit/tree/main/docs"
+Research = "https://github.com/ArchLinuxAddict/dex2c-recovery-lab"
+Issues = "https://github.com/ArchLinuxAddict/dex2c-recovery-toolkit/issues"
+Security = "https://github.com/ArchLinuxAddict/dex2c-recovery-toolkit/security/advisories/new"
+
+[project.scripts]
+dex2c-recover = "dex2c_recover.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "integration: requires an authorized Dex2C-protected APK via DEX2C_TEST_APK",
+    "slow: tests that execute Ghidra or device workflows",
+]
+
+[tool.ruff]
+line-length = 140
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

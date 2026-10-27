@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible toolkit defect (no proprietary binaries)
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach APKs, recovered third-party code, device logs, or personal paths.
+  - type: input
+    id: version
+    attributes:
+      label: Toolkit version / commit
+      placeholder: 1.0.0 or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Linux, Python 3.12, optional tool versions
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized error
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use a synthetic or self-created fixture where possible.
+    validations:
+      required: false
